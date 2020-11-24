@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,7 +22,7 @@ public class TakeSnap_screenshot {
 	public static void main(String[] args) throws IOException {
 WebDriverManager.chromedriver().setup();
 		
-		ChromeDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("admin123");
